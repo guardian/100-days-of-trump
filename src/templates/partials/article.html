@@ -3,6 +3,7 @@
         <div class='trump__body'>
             <h2 class='trump__byline'>By David Smith and Sam Morris</h2>
             {{#each Body}}
+
                 <div class='trump__section trump__section--{{ section }}'>
                     {{#if_not_eq section 'intro'}}
                         <h2 class='trump__divider'>{{ section }}</h2>
@@ -10,6 +11,15 @@
 
                     {{{ copy }}}
                 </div>
+                    {{#if_eq section 'Greatest achievements'}}
+        </div>
+    </div>
+                        {{> templates/partials/timeline }}
+
+    <div class='gs-container'>
+        <div class='trump__body'>
+                    {{/if_eq}}
+
             {{/each}}
         </div>
     </div>
