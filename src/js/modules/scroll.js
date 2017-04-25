@@ -19,7 +19,7 @@ module.exports =  {
         $(window).resize(function() {
             this.setValues();
             this.onScroll();
-        })
+        }.bind(this));
     },
 
     onScroll: function() {
