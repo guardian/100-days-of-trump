@@ -51,6 +51,13 @@ module.exports = {
                 return opts.inverse(this);
         });
 
+        handlebars.registerHelper('if_not_eq', function(a, b, opts) {
+            if (a !== b)
+                return opts.fn(this);
+            else
+                return opts.inverse(this);
+        })
+
         var html = fs.readFileSync('src/templates/main.html', 'utf8');
         var template = handlebars.compile(html);
 
@@ -61,7 +68,7 @@ module.exports = {
             template_extensions: ['html', 'svg']
         });
 
-        fs.writeFileSync(path + '/main.html', template().replace(/@@assetPath@@/g, absolutePath));
+        fs.writeFileSync(path + '/main.html', template(data()).replace(/@@assetPath@@/g, absolutePath));
         console.log('updated html!');
     },
 

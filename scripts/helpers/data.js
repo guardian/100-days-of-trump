@@ -1,40 +1,16 @@
 var request = require('sync-request');
 var fs = require('fs-extra');
+var marked = require('marked');
 
-var data, furniture;
+var data;
 
-function getBoldLength(copy) {
-    if (copy.split('**').length > 1) {
-        var copyLength = copy.split('**')[1].length;
-
-        if (copyLength < 10) {
-            return 'small'
-        } else if (copyLength < 20) {
-            return 'medium'
-        } else {
-            return 'large'
-        }
-    }
-}
-
-function setFurniture() {
+module.exports = function getData() {
+    data = require('../../scripts/local.json');
     data = data.sheets;
-    furniture = {}
-    for (var i = 0; i < data.furniture.length; i++) {
-        furniture[data.furniture[i].option] = data.furniture[i].value
-    }
-    data.furniture = furniture;
-}
 
-module.exports = function getData(explainer) {
-    if (explainer.name !== 'local') {
-        data = request('GET', explainer.data);
-        data = JSON.parse(data.getBody('utf8'));
-    } else {
-        data = require('../../scripts/local.json');
+    for (var i in data.Body) {
+        data.Body[i].copy = marked(data.Body[i].copy);
     }
-
-    setFurniture();
 
     return data;
 };

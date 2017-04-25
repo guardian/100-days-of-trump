@@ -26,3 +26,27 @@
     color: $c-red;
     margin: 3px 0 12px 0;
 }
+
+.trump__divider {
+    position: relative;
+    font-size: 24px;
+    font-family: 'Guardian Egyptian Web';
+    line-height: 1.2;
+    font-weight: 900;
+    color: $c-blue;
+    margin-top: 24px;
+
+    @include mq(desktop) {
+        font-size: 40px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 120px;
+        height: 2px;
+        background-color: $c-red;
+    }
+}

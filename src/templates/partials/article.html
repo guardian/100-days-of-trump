@@ -2,8 +2,15 @@
     <div class='gs-container'>
         <div class='trump__body'>
             <h2 class='trump__byline'>By David Smith and Sam Morris</h2>
-            <p>An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud. My placeholder text, I think, is going to end up being very good with women. If Trump Ipsum weren’t my own words, perhaps I’d be dating it.</p>
-            <p>I have a 10 year old son. He has words. He is so good with these words it's unbelievable. Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being, you know, shot. Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website. Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website.</p>
+            {{#each Body}}
+                <div class='trump__section trump__section--{{ section }}'>
+                    {{#if_not_eq section 'intro'}}
+                        <h2 class='trump__divider'>{{ section }}</h2>
+                    {{/if_not_eq}}
+
+                    {{{ copy }}}
+                </div>
+            {{/each}}
         </div>
     </div>
 </div>
