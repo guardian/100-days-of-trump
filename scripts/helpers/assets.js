@@ -58,6 +58,13 @@ module.exports = {
                 return opts.inverse(this);
         })
 
+        handlebars.registerHelper('times', function(n, block) {
+            var accum = '';
+            for(var i = 0; i < n; ++i)
+                accum += block.fn(i);
+            return accum;
+        });
+
         var html = fs.readFileSync('src/templates/main.html', 'utf8');
         var template = handlebars.compile(html);
 

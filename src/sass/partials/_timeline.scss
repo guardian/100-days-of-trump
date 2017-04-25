@@ -1,4 +1,108 @@
-.trump__timeline {
+.trump-timeline__data,
+.trump-timeline__header {
+    .gs-container {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+
+        @include mq(mobileLandscape) {
+            padding: 0 20px;
+        }
+    }
+}
+
+.trump-timeline__header {
+    position: relative;
     background-color: $c-blue;
     color: $c-white;
+    margin-top: 24px;
+}
+
+.trump-timeline__title {
+    font-size: 24px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 900;
+    padding-bottom: 36px;
+}
+
+.trump-timeline__cutout {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+
+    @include mq(mobileLandscape) {
+        right: 20px;
+    }
+
+    @include mq(desktop) {
+        right: 120px;
+    }
+}
+
+.trump-timeline__data {
+    background-color: $c-off-white;
+    color: $c-grey;
+    height: 300px;
+}
+
+.trump-timeline__dateline {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 24px;
+    border-top: 1px solid $c-light-grey;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(mobileLandscape) {
+        left: 20px;
+        right: 20px;
+    }
+}
+
+.trump-timeline__date {
+    position: relative;
+    width: 1px;
+    height: 10px;
+    background-color: $c-light-grey;
+    margin-right: -1px;
+
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: -14px;
+        border-left: 1px solid $c-light-grey;
+        padding-left: 3px;
+        height: 14px;
+        font-family: 'Guardian Sans Web';
+        font-size: 14px;
+        line-height: 20px;
+        color: $c-dark-grey;
+        white-space: nowrap;
+    }
+}
+
+.trump-timeline__date--0:after {
+    content: '20th January Day 1';
+}
+
+.trump-timeline__date--12:after {
+    content: 'February';
+}
+
+.trump-timeline__date--40:after {
+    content: 'March';
+}
+
+.trump-timeline__date--71:after {
+    content: 'April';
+}
+
+.trump-timeline__date--99:after {
+    content: '29th April Day 100';
+    left: auto;
+    right: 0;
+    border-left: none;
+    border-right: 1px solid $c-light-grey;
+    padding-right: 3px;
 }
