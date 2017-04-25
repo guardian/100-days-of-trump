@@ -1,4 +1,4 @@
-.trump-tracker-header {
+.trump-header {
     background-color: darken($c-blue, 10%);
 
     .gs-container {
@@ -25,7 +25,7 @@
     }
 }
 
-.trump-tracker-header__standfirst {
+.trump-header__standfirst {
     font-size: 20px;
     line-height: 24px;
     font-family: 'Guardian Egyptian Web';
@@ -42,7 +42,7 @@
     }
 }
 
-.trump-tracker-header__logo {
+.trump-header__logo {
     position: absolute;
     width: calc(100% - 20px);
     bottom: 12px;
@@ -72,7 +72,7 @@
     }
 }
 
-.trump-tracker-header__share-panel {
+.trump-header__share-panel {
     position: absolute;
     left: 10px;
     bottom: 12px;
@@ -89,7 +89,7 @@
     }
 }
 
-.trump-tracker-header__share-link {
+.trump-header__share-link {
     position: relative;
     width: 32px;
     height: 32px;
@@ -112,7 +112,7 @@
     }
 }
 
-.trump-tracker-header__share-link--facebook {
+.trump-header__share-link--facebook {
     background-color: $c-facebook;
 
     &:hover {
@@ -120,7 +120,7 @@
     }
 }
 
-.trump-tracker-header__share-link--twitter {
+.trump-header__share-link--twitter {
     background-color: $c-twitter;
 
     &:hover {

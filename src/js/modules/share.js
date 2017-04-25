@@ -14,16 +14,6 @@ module.exports =  {
         $('.trump-tracker-header__share-link--email').attr('href', this.getEmailLink());
     },
 
-    setDayLinks: function() {
-        $('.trump-tracker__day').each(function(index, e) {
-            // the #day-0 needs to be added
-            
-            $(e).find('.trump-tracker__day-share-button--twitter').attr('href', this.getTwitterLink($(e).attr('id')));
-            $(e).find('.trump-tracker__day-share-button--facebook').attr('href', this.getFacebookLink($(e).attr('id')));
-            $(e).find('.trump-tracker__day-share-button--email').attr('href', this.getEmailLink($(e).attr('id')));
-        }.bind(this));
-    },
-
     getTwitterLink: function(id) {
         return 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + 
                 '&url=' + encodeURIComponent(pageUrl + (id ? '#' + id : '') + '?CMP=share_btn_tw');

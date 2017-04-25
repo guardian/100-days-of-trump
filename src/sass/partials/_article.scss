@@ -1,0 +1,28 @@
+.trump__body {
+    width: 620px;
+    font-family: 'Guardian Text Egyptian Web';
+    font-size: 16px;
+    line-height: 24px;
+    color: $c-black;
+    padding: 0 10px;
+
+    @include mq(mobileLandscape) {
+        padding: 0 20px;
+    }
+
+    @include mq(leftCol) {
+        margin-left: 240px;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+}
+
+.trump__byline {
+    font-size: 16px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 900;
+    color: $c-red;
+    margin: 3px 0 12px 0;
+}

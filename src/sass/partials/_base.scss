@@ -1,14 +1,10 @@
-.trump-tracker {
+.trump {
     font-family: 'Guardian Egyptian Web';
     font-weight: 400;
     background-color: $c-white;
-
-    h1, h2, h3, h4, h5, p {
-        margin: 0;
-    }
 }
 
-.trump-tracker__mainCol {
+.trump__mainCol {
     position: relative;
     padding: 0 10px;
     max-width: 620px;
@@ -60,6 +56,6 @@
     }
 }
 
-.trump-tracker__content {
+.trump__content {
     position: relative;
 }
