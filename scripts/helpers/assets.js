@@ -6,6 +6,8 @@ var stringify = require('stringify');
 var sass = require('node-sass');
 var deasync = require('deasync');
 
+var data = require('../../scripts/helpers/data');
+
 module.exports = {
     js: function(path, fileName, absolutePath) {
         fs.removeSync(path + '/' + fileName + '.js');
