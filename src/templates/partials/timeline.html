@@ -1,15 +1,17 @@
-<div class='trump-timeline__header'>
-    <div class='gs-container'>
-        <h2 class='trump-timeline__title'>Greatest achievements</h2>
-        <img class='trump-timeline__cutout' src='@@assetPath@@/assets/images/iphone.png' />
+<div class='trump-timeline'>
+    <div class='trump-timeline__header'>
+        <div class='gs-container'>
+            <h2 class='trump-timeline__title'>Greatest achievements</h2>
+            <img class='trump-timeline__cutout' src='@@assetPath@@/assets/images/iphone.png' />
+        </div>
     </div>
-</div>
-<div class='trump-timeline__data'>
-    <div class='gs-container'>
-        <div class='trump-timeline__dateline'>
-            {{#times 100}}
-                <div class='trump-timeline__date trump-timeline__date--{{ this }}'></div>
-            {{/times}}
+    <div class='trump-timeline__data'>
+        <div class='gs-container'>
+            <div class='trump-timeline__dateline'>
+                {{#times 100}}
+                    <div class='trump-timeline__date trump-timeline__date--{{ this }}'></div>
+                {{/times}}
+            </div>
         </div>
     </div>
 </div>

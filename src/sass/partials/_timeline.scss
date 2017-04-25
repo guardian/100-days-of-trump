@@ -1,3 +1,12 @@
+.trump-timeline.is-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    z-index: 10;
+}
+
 .trump-timeline__data,
 .trump-timeline__header {
     .gs-container {
