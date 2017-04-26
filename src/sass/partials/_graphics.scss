@@ -116,3 +116,19 @@
     border-right: 1px solid $c-light-grey;
     padding-right: 3px;
 }
+
+$graphics: 'greatest-achievements', 'worst-failures', 'tone', 'legislative-agenda', 'competence', 'facing-the-world', 'conflicts-of-interest', 'the-russia-question', 'team-trump';
+
+.trump-graphic__labels,
+.trump-graphic__graphic {
+    display: none;
+}
+
+@each $graphic in $graphics {
+    .trump-graphic--#{$graphic} {
+        .trump-graphic__labels--#{$graphic},
+        .trump-graphic__graphic--#{$graphic} {
+            display: block;
+        }
+    }
+}

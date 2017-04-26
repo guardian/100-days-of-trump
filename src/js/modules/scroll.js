@@ -26,6 +26,7 @@ module.exports =  {
     onScroll: function() {
         windowTop  = window.pageYOffset || document.documentElement.scrollTop;
         this.fixTimeline();
+        this.setSection();
     },
 
     setValues: function() {
@@ -42,5 +43,16 @@ module.exports =  {
         } else {
             $('.trump-graphic').addClass('is-sticky');
         }
+    },
+
+    setSection: function() {
+        $('.trump__section').each(function(i) {
+            if (windowTop > $(this).offset().top - ($(this).height() /4 )) {
+                $('.trump-graphic').removeClass(function(index, className) {
+                    return (className.match (/(^|\s)trump-graphic--\S+/g) || []).join(' ');
+                });
+                $('.trump-graphic').addClass('trump-graphic--' + $(this).attr('data-handle'));
+            }
+        });
     }
 };
