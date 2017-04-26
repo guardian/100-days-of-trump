@@ -1,0 +1,67 @@
+.trump-timeline {
+    position: relative;
+}
+
+.trump-timeline__entry {
+    position: absolute;
+    top: 24px;
+    max-width: 300px;
+    padding-left: 70px;
+    margin-left: -32px;
+
+    &:nth-of-type(even) {
+        top: 148px;
+    }
+}
+
+@for $i from 0 through 100 {
+    .trump-timeline__entry--#{$i} {
+        left: ($i * 1%) + ($i * 0.01%);
+    }
+}
+
+.trump-timeline__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background-color: $c-light-grey;
+    background-position: center center;
+    background-size: cover;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -180px;
+        width: 1px;
+        background-color: $c-red;
+        height: 180px;
+    }
+}
+
+.trump-timeline__title {
+    position: relative;
+    z-index: 3;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+    color: $c-red;
+    background-color: $c-off-white;
+}
+
+.trump-timeline__description {
+    position: relative;
+    z-index: 3;
+    font-family: 'Guardian Egyptian Web';
+    font-size: 16px;
+    line-height: 1.2;
+    color: $c-black;
+    background-color: $c-off-white;
+}

@@ -1,7 +1,7 @@
 <div class='trump-timeline'>
 {{#each this }}
     <div class='trump-timeline__entry trump-timeline__entry--{{ day }}'>
-        <img class='trump-timeline__image' src='{{ image }}' />
+        <div class='trump-timeline__image' style='background-image: url({{ image }});'></div>
         <h3 class='trump-timeline__title'>{{ title }}</h3>
         <p class='trump-timeline__description'>{{ description }}</p>
     </div>

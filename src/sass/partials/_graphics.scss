@@ -59,10 +59,10 @@
     position: absolute;
     left: 10px;
     right: 10px;
-    bottom: 24px;
+    bottom: 0;
+    height: 38px;
+    background-color: $c-off-white;
     border-top: 1px solid $c-light-grey;
-    display: flex;
-    justify-content: space-between;
 
     @include mq(mobileLandscape) {
         left: 20px;
@@ -71,7 +71,8 @@
 }
 
 .trump-graphic__date {
-    position: relative;
+    position: absolute;
+    top: 0;
     width: 1px;
     height: 10px;
     background-color: $c-light-grey;
@@ -89,6 +90,12 @@
         line-height: 20px;
         color: $c-dark-grey;
         white-space: nowrap;
+    }
+}
+
+@for $i from 0 through 100 {
+    .trump-graphic__date--#{$i} {
+        left: ($i * 1%) + ($i * 0.01%);
     }
 }
 
