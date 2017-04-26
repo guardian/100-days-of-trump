@@ -132,3 +132,11 @@ $graphics: 'greatest-achievements', 'worst-failures', 'tone', 'legislative-agend
         }
     }
 }
+
+// overrides
+.trump-graphic--intro {
+    .trump-graphic__labels--greatest-achievements,
+    .trump-graphic__graphic--greatest-achievements {
+        display: block;
+    }
+}

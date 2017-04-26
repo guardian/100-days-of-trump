@@ -47,7 +47,7 @@ module.exports =  {
 
     setSection: function() {
         $('.trump__section').each(function(i) {
-            if (windowTop > $(this).offset().top - ($(this).height() /4 )) {
+            if (windowTop > $(this).offset().top - ($(this).height() / 4) - timeLineHeight) {
                 $('.trump-graphic').removeClass(function(index, className) {
                     return (className.match (/(^|\s)trump-graphic--\S+/g) || []).join(' ');
                 });
