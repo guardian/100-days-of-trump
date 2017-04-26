@@ -25,50 +25,72 @@
     }
 }
 
+.trump-header__content {
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+
+    @include mq(mobileLandscape) {
+        left: 20px;
+    }
+}
+
+.trump-header__headline {
+    font-size: 32px;
+    line-height: 1.1;
+    font-family: 'Guardian Egyptian Web';
+    color: $c-white;
+    font-family: 800;
+
+    @include mq(tablet) {
+        font-size: 60px;
+        line-height: .9;
+    }
+
+    span {
+        display: block;
+    }
+
+    span:nth-of-type(1) {
+        margin-left: 20px;
+    }
+
+    span:nth-of-type(2) {
+        margin-left: 60px;
+    }
+
+    @include mq(tablet) {
+        span:nth-of-type(1) {
+            margin-left: 80px;
+        }
+
+        span:nth-of-type(2) {
+            margin-left: 240px;
+        }
+    }
+}
+
 .trump-header__standfirst {
     font-size: 20px;
     line-height: 24px;
     font-family: 'Guardian Egyptian Web';
     font-weight: 800;
     color: $c-light-blue;
-    max-width: 350px;
+    margin-left: 20px;
 
     @include mq(tablet) {
-        max-width: 460px;
-    }
-
-    span {
-        display: none;
+        margin-left: 80px;
     }
 }
 
 .trump-header__logo {
     position: absolute;
-    width: calc(100% - 20px);
-    bottom: 12px;
+    top: 12px;
     right: 10px;
+    max-width: 300px;
 
     @include mq(mobileLandscape) {
-        width: 320px;
         right: 20px;
-    }
-
-    @include mq(tablet) {
-        width: 440px;
-    }
-
-    @include mq(desktop) {
-        width: 620px;
-        left: 20px;
-    }
-
-    @include mq(leftCol) {
-        left: 180px;
-    }
-
-    @include mq(wide) {
-        bottom: 16px;
-        left: 260px;
     }
 }
 
@@ -81,10 +103,12 @@
     @include mq(mobileLandscape) {
         left: 20px;
         display: block;
+        top: 20px;
     }
 
     @include mq(desktop) {
         left: auto;
+        top: auto;
         right: 20px;
     }
 }
