@@ -11,7 +11,7 @@ module.exports = function getData() {
     data.Graphics = {};
 
     for (var i in data.Body) {
-        data.Body[i].copy = marked(data.Body[i].copy);
+        data.Body[i].copy = marked(data.Body[i].copy).replace(/â€˜/g, '&lsquo;').replace(/â€™/g, '&rsquo;').replace(/â€œ/g, '&ldquo;').replace(/â€/g, '&rdquo;');
         data.Body[i].handle = data.Body[i].section.replace(/ /g, '-').toLowerCase();
 
         data.Graphics[i] = {
