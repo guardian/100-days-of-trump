@@ -9,6 +9,7 @@ module.exports =  {
     init: function() {
         this.bindings();
         this.setValues();
+        this.onScroll();
     },
 
     bindings: function() {
