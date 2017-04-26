@@ -1,0 +1,24 @@
+<div class='trump-graphic trump-graphic--greatest-achievements'>
+    <div class='trump-graphic__header'>
+        <div class='gs-container'>
+            <h2 class='trump-graphic__title'>Greatest achievements</h2>
+            <img class='trump-graphic__cutout' src='@@assetPath@@/assets/images/iphone.png' />
+        </div>
+    </div>
+    <div class='trump-graphic__data'>
+        <div class='gs-container'>
+            {{#each this}}
+                <div class='trump-graphic__graphic'>
+                    {{#if_eq type 'timeline'}}
+                        {{> templates/partials/timeline handle }}
+                    {{/if_eq}}
+                </div>
+            {{/each}}
+            <div class='trump-graphic__dateline'>
+                {{#times 100}}
+                    <div class='trump-graphic__date trump-graphic__date--{{ this }}'></div>
+                {{/times}}
+            </div>
+        </div>
+    </div>
+</div>

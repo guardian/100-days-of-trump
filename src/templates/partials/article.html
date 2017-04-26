@@ -4,7 +4,7 @@
             <h2 class='trump__byline'>By David Smith and Sam Morris</h2>
             {{#each Body}}
 
-                <div class='trump__section trump__section--{{ section }}'>
+                <div class='trump__section trump__section--{{ handle }}'>
                     {{#if_not_eq section 'intro'}}
                         <h2 class='trump__divider'>{{ section }}</h2>
                     {{/if_not_eq}}
@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    {{> templates/partials/timeline }}
+    {{> templates/partials/graphic ../Graphics }}
 
     <div class='gs-container'>
         <div class='trump__body'>

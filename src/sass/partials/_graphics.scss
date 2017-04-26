@@ -1,4 +1,4 @@
-.trump-timeline.is-sticky {
+.trump-graphic.is-sticky {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -7,8 +7,8 @@
     z-index: 10;
 }
 
-.trump-timeline__data,
-.trump-timeline__header {
+.trump-graphic__data,
+.trump-graphic__header {
     .gs-container {
         height: 100%;
         box-sizing: border-box;
@@ -20,21 +20,21 @@
     }
 }
 
-.trump-timeline__header {
+.trump-graphic__header {
     position: relative;
     background-color: $c-blue;
     color: $c-white;
     margin-top: 24px;
 }
 
-.trump-timeline__title {
+.trump-graphic__title {
     font-size: 24px;
     font-family: 'Guardian Egyptian Web';
     font-weight: 900;
     padding-bottom: 36px;
 }
 
-.trump-timeline__cutout {
+.trump-graphic__cutout {
     position: absolute;
     right: 10px;
     bottom: 0;
@@ -48,14 +48,14 @@
     }
 }
 
-.trump-timeline__data {
+.trump-graphic__data {
     background-color: $c-off-white;
     color: $c-grey;
     height: 300px;
     padding-bottom: 6px;
 }
 
-.trump-timeline__dateline {
+.trump-graphic__dateline {
     position: absolute;
     left: 10px;
     right: 10px;
@@ -70,7 +70,7 @@
     }
 }
 
-.trump-timeline__date {
+.trump-graphic__date {
     position: relative;
     width: 1px;
     height: 10px;
@@ -92,23 +92,23 @@
     }
 }
 
-.trump-timeline__date--0:after {
+.trump-graphic__date--0:after {
     content: '20th January Day 1';
 }
 
-.trump-timeline__date--12:after {
+.trump-graphic__date--12:after {
     content: 'February';
 }
 
-.trump-timeline__date--40:after {
+.trump-graphic__date--40:after {
     content: 'March';
 }
 
-.trump-timeline__date--71:after {
+.trump-graphic__date--71:after {
     content: 'April';
 }
 
-.trump-timeline__date--99:after {
+.trump-graphic__date--99:after {
     content: '29th April Day 100';
     left: auto;
     right: 0;

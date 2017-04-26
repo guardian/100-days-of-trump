@@ -31,16 +31,16 @@ module.exports =  {
     setValues: function() {
         windowTop  = window.pageYOffset || document.documentElement.scrollTop;
         windowHeight = $(window).height()
-        $('.trump-timeline').removeClass('is-sticky');
-        timeLinePos = $('.trump-timeline').offset().top;
-        timeLineHeight = $('.trump-timeline').height();
+        $('.trump-graphic').removeClass('is-sticky');
+        timeLinePos = $('.trump-graphic').offset().top;
+        timeLineHeight = $('.trump-graphic').height();
     },
 
     fixTimeline: function() {
         if (timeLinePos + timeLineHeight > windowTop + windowHeight) {
-            $('.trump-timeline').removeClass('is-sticky');
+            $('.trump-graphic').removeClass('is-sticky');
         } else {
-            $('.trump-timeline').addClass('is-sticky');
+            $('.trump-graphic').addClass('is-sticky');
         }
     }
 };
