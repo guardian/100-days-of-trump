@@ -1,7 +1,7 @@
 <div class='trump-graphic trump-graphic--greatest-achievements'>
     <div class='trump-graphic__header'>
         <div class='gs-container'>
-            {{#each this}}
+            {{#each Graphics}}
                 <div class='trump-graphic__labels trump-graphic__labels--{{ handle }}'>
                     <h2 class='trump-graphic__title'>{{ title }}</h2>
                     <img class='trump-graphic__cutout' src='@@assetPath@@/assets/images/{{ handle }}.png' />
@@ -12,10 +12,10 @@
 
     <div class='trump-graphic__data'>
         <div class='gs-container'>
-            {{#each this}}
+            {{#each Graphics}}
                 <div class='trump-graphic__graphic trump-graphic__graphic--{{ handle }}'>
-                    {{#if_eq type 'timeline'}}
-                        {{> templates/partials/timeline handle }}
+                    {{#if_eq handle 'greatest-achievements'}}
+                        {{> templates/partials/timeline ../GreatestAchievements }}
                     {{/if_eq}}
                 </div>
             {{/each}}

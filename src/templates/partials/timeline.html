@@ -1,0 +1,9 @@
+<div class='trump-timeline'>
+{{#each this }}
+    <div class='trump-timeline__entry trump-timeline__entry--{{ day }}'>
+        <img class='trump-timeline__image' src='{{ image }}' />
+        <h3 class='trump-timeline__title'>{{ title }}</h3>
+        <p class='trump-timeline__description'>{{ description }}</p>
+    </div>
+{{/each}}
+</div>
