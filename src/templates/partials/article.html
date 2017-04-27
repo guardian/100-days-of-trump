@@ -5,13 +5,19 @@
             {{#each Body}}
                 <div class='trump__section' data-handle='{{ handle }}'>
                     {{#if_not_eq section 'intro'}}
-                        <h2 class='trump__divider'>{{ section }}</h2>
+                        {{#if_not_eq section 'outro'}}
+                            <h2 class='trump__divider'>{{ section }}</h2>
+                        {{/if_not_eq}}
                     {{/if_not_eq}}
+
+                    {{#if_eq section 'outro'}}
+                        <h2 class='trump__divider'></h2>
+                    {{/if_eq}}
 
                     {{{ copy }}}
                 </div>
 
-                    {{#if_eq section 'Greatest achievements'}}
+                    {{#if_eq section 'Best achievements'}}
         </div>
     </div>
 

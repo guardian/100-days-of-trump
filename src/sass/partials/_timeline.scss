@@ -4,13 +4,13 @@
 
 .trump-timeline__entry {
     position: absolute;
-    top: 24px;
+    top: 12px;
     max-width: 300px;
     padding-left: 70px;
     margin-left: -32px;
 
     &:nth-of-type(even) {
-        top: 148px;
+        top: 84px;
     }
 }
 

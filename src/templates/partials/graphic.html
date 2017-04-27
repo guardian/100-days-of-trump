@@ -14,8 +14,20 @@
         <div class='gs-container'>
             {{#each Graphics}}
                 <div class='trump-graphic__graphic trump-graphic__graphic--{{ handle }}'>
-                    {{#if_eq handle 'greatest-achievements'}}
+                    {{#if_eq handle 'best-achievements'}}
                         {{> templates/partials/timeline ../GreatestAchievements }}
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'worst-failures'}}
+                        {{> templates/partials/timeline ../WorstFailures }}
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'the-russia-question'}}
+                        {{> templates/partials/timeline ../TheRussiaQuestion }}
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'team-trump'}}
+                        {{> templates/partials/timeline ../TeamTrump }}
                     {{/if_eq}}
                 </div>
             {{/each}}

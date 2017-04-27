@@ -51,7 +51,7 @@
 .trump-graphic__data {
     background-color: $c-off-white;
     color: $c-grey;
-    height: 300px;
+    height: 200px;
     padding-bottom: 6px;
 }
 
@@ -124,7 +124,7 @@
     padding-right: 3px;
 }
 
-$graphics: 'greatest-achievements', 'worst-failures', 'tone', 'legislative-agenda', 'competence', 'facing-the-world', 'conflicts-of-interest', 'the-russia-question', 'team-trump';
+$graphics: 'best-achievements', 'worst-failures', 'tone', 'legislative-agenda', 'competence', 'global-player', 'conflicts-of-interest', 'the-russia-question', 'team-trump';
 
 .trump-graphic__labels,
 .trump-graphic__graphic {
