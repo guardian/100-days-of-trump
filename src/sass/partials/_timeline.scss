@@ -37,10 +37,15 @@
         left: 0;
         right: 0;
         margin: auto;
-        bottom: -180px;
+        bottom: -86px;
         width: 1px;
         background-color: $c-red;
-        height: 180px;
+        height: 86px;
+    }
+
+    .trump-timeline__entry:nth-of-type(even) &:after {
+        height: 20px;
+        bottom: -20px;
     }
 }
 
