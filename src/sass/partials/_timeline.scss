@@ -16,7 +16,21 @@
 
 @for $i from 0 through 100 {
     .trump-timeline__entry--#{$i} {
-        left: ($i * 1%) + ($i * 0.01%);
+        left: ($i * 1%) + ($i * 0.01%) - .96%;
+    }
+}
+
+@for $i from 80 through 100 {
+    .trump-timeline__entry--#{$i} {
+        padding-left: 0;
+        padding-right: 70px;
+        margin-left: -278px;
+        max-width: 240px;
+
+        .trump-timeline__image {
+            left: auto;
+            right: 0;
+        }
     }
 }
 
