@@ -4,8 +4,7 @@
 
 .trump-competence__day {
     width: 1%;
-    margin-top: 12px;
-    height: 100px;
+    height: 120px;
     background-color: $c-red;
     opacity: 0.3;
     float: left;
@@ -18,4 +17,13 @@
     &.playedGolf--TRUE {
         border-bottom: 1px solid green;
     }
+}
+
+.trump-key--isWhiteHouse:before {
+    background-color: $c-red;
+}
+
+.trump-key--isNotWhiteHouse:before {
+    background-color: $c-red;
+    opacity: 0.3;
 }

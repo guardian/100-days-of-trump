@@ -1,7 +1,14 @@
 <div class='trump-competence'>
-    {{#each this}}
-        <div class='trump-competence__day isWhiteHouse--{{inWhiteHouse?}} playedGolf--{{playedGolf?}}'>
+    <div class='trump-legend'>
+        <div class='trump-key trump-key--isWhiteHouse'>Night in White House</div>
+        <div class='trump-key trump-key--isNotWhiteHouse'>Night in elsewhere</div>
 
+    </div>
+    {{#each this}}
+        <div class='trump-competence__day isWhiteHouse--{{inWhiteHouse?}}'>
+            {{#if playedGolf?}}
+<!--                 <img src='@@assetPath@@/assets/images/golf.png' /> -->
+            {{/if}}
         </div>
     {{/each}}
 </div>
