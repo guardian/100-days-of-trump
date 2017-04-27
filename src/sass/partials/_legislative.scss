@@ -1,0 +1,19 @@
+.trump-legislative {
+    position: relative;
+}
+
+.trump-executive-order {
+    position: absolute;
+    top: 100px;
+    width: 12px;
+    margin-left: -12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: $c-grey;
+}
+
+@for $i from 1 through 100 {
+    .trump-executive-order--#{$i} {
+        left: $i * 1%;
+    }
+}

@@ -22,8 +22,16 @@
                         {{> templates/partials/timeline ../WorstFailures }}
                     {{/if_eq}}
 
+                    {{#if_eq handle 'legislative-agenda'}}
+                        {{> templates/partials/legislative ../LegislativeAgenda }}
+                    {{/if_eq}}
+
                     {{#if_eq handle 'competence'}}
                         {{> templates/partials/competence ../Competence }}
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'conflict-of-interests'}}
+                        {{> templates/partials/timeline ../ConflictOfInterests }}
                     {{/if_eq}}
 
                     {{#if_eq handle 'the-russia-question'}}
