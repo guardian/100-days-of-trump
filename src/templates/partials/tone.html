@@ -1,11 +1,18 @@
 <div class='trump-tone'>
-    <svg viewBox="0 0 1000 134" class="trump-tone__chart" preserveAspectRatio="none">
-        <polyline fill="none"
-        points="
-            {{#each this}}
-                {{calculateChart day total 1000}}
-            {{/each}}
-            "
-        />
-    </svg>
+    <div class='trump-tone__wrapper'>
+        <svg viewBox="0 0 1000 134" class="trump-tone__chart" preserveAspectRatio="none">
+            <polyline fill="none"
+            points="0, 134
+                {{#each this}}
+                    {{calculateChart day total 1000}}
+                {{/each}}
+                "
+            />
+        </svg>
+        <div class='trump-tone__line trump-tone__line--200'>200</div>
+        <div class='trump-tone__line trump-tone__line--400'>400</div>
+        <div class='trump-tone__line trump-tone__line--600'>600</div>
+        <div class='trump-tone__line trump-tone__line--800'>800</div>
+        <div class='trump-tone__line trump-tone__line--1000'>1000</div>
+    </div>
 </div>

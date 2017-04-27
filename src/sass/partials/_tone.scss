@@ -1,11 +1,44 @@
 .trump-tone {
+    padding-top: 27px;
+}
+
+.trump-tone__wrapper {
     position: relative;
 }
 
 .trump-tone__chart {
+    position: relative;
+    z-index: 3;
     width: 100%;
     height: 134px;
-    margin-top: 27px;
     stroke-width: 2px;
     stroke: $c-red;
+}
+
+.trump-tone__line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    border-top: 1px solid rgba($c-light-grey, .3);
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    color: $c-grey;
+}
+
+.trump-tone__line--800 {
+    top: 20%
+}
+
+.trump-tone__line--600 {
+    top: 40%
+}
+
+.trump-tone__line--400 {
+    top: 60%
+}
+
+.trump-tone__line--200 {
+    top: 80%
 }
