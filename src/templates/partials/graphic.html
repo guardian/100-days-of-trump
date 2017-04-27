@@ -22,6 +22,10 @@
                         {{> templates/partials/timeline ../WorstFailures }}
                     {{/if_eq}}
 
+                    {{#if_eq handle 'tone'}}
+                        {{> templates/partials/tone ../Tone }}
+                    {{/if_eq}}
+
                     {{#if_eq handle 'legislative-agenda'}}
                         {{> templates/partials/legislative ../LegislativeAgenda }}
                     {{/if_eq}}
