@@ -17,6 +17,16 @@
     p {
         margin-bottom: 16px;
     }
+
+    a {
+        color: $c-blue;
+        border-bottom: $c-red 1px solid;
+
+        &:hover {
+            text-decoration: none;
+            color: $c-red;
+        }
+    }
 }
 
 .trump__byline {
