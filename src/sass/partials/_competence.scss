@@ -1,0 +1,21 @@
+.trump-competence {
+    position: relative;
+}
+
+.trump-competence__day {
+    width: 1%;
+    margin-top: 12px;
+    height: 100px;
+    background-color: $c-red;
+    opacity: 0.3;
+    float: left;
+
+    &.isWhiteHouse--TRUE {
+        background-color: $c-red;
+        opacity: 1;
+    }
+    
+    &.playedGolf--TRUE {
+        border-bottom: 1px solid green;
+    }
+}

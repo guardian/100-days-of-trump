@@ -22,6 +22,10 @@
                         {{> templates/partials/timeline ../WorstFailures }}
                     {{/if_eq}}
 
+                    {{#if_eq handle 'competence'}}
+                        {{> templates/partials/competence ../Competence }}
+                    {{/if_eq}}
+
                     {{#if_eq handle 'the-russia-question'}}
                         {{> templates/partials/timeline ../TheRussiaQuestion }}
                     {{/if_eq}}
