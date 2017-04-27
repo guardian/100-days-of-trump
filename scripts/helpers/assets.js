@@ -44,6 +44,12 @@ module.exports = {
     html: function(path, absolutePath) {
         fs.removeSync(path + '/main.html');
 
+        handlebars.registerHelper('calculateChart', function(day, value, maxis) {
+            var chartHeight = 134;
+            var axis = Math.abs((value / maxis * chartHeight) - chartHeight);
+            return day + '0, ' + axis;
+        });
+
         handlebars.registerHelper('if_eq', function(a, b, opts) {
             if(a == b) // Or === depending on your needs
                 return opts.fn(this);
