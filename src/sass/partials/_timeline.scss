@@ -20,17 +20,16 @@
     }
 }
 
-@for $i from 80 through 100 {
-    .trump-timeline__entry--#{$i} {
-        padding-left: 0;
-        padding-right: 70px;
-        margin-left: -278px;
-        max-width: 240px;
 
-        .trump-timeline__image {
-            left: auto;
-            right: 0;
-        }
+.trump-timeline__entry--flip {
+    padding-left: 0;
+    padding-right: 70px;
+    margin-left: -238px;
+    max-width: 280px;
+
+    .trump-timeline__image {
+        left: auto;
+        right: 0;
     }
 }
 
