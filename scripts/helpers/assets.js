@@ -50,6 +50,10 @@ module.exports = {
             return day + '0, ' + axis;
         });
 
+        handlebars.registerHelper('handelize', function(string) {
+            return string.replace(/ /g, '-').toLowerCase();
+        })
+
         handlebars.registerHelper('if_eq', function(a, b, opts) {
             if(a == b) // Or === depending on your needs
                 return opts.fn(this);

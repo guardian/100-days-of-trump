@@ -1,0 +1,8 @@
+<div class='trump-global'>
+    {{#each this}}
+        <div class='trump-global__visit trump-global__visit--{{ day }} trump-global__visit--{{ nation }}'>
+            <img class='trump-global__flag' src='@@assetPath@@/assets/images/flag-{{ handelize nation }}.jpg' />
+            <div class='trump-global__text'>{{ nation }} <span>{{ name }}</span></div>
+        </div>
+    {{/each}}
+</div>

@@ -1,0 +1,42 @@
+.trump-global {
+    position: relative;
+}
+
+.trump-global__visit {
+    position: absolute;
+    top: -10px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 134px;
+        width: 1px;
+        background-color: $c-black;
+    }
+}
+
+@for $i from 0 through 100 {
+    .trump-global__visit--#{$i} {
+        left: ($i * 1%) + ($i * 0.01%) - .96%;
+    }
+}
+
+.trump-global__text {
+    transform: rotate(-90deg) translateX(-144px);
+    transform-origin: left;
+    font-size: 14px;
+    line-height: 1.45;
+    font-family: 'Guardian Sans Web';
+    color: $c-black;
+
+    span {
+        display: block;
+        color: $c-dark-grey;
+    }
+}
+
+.trump-global__flag {
+    position: absolute;
+    z-index: 2;
+    top: 42px;
+}

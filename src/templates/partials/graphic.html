@@ -38,6 +38,10 @@
                         {{> templates/partials/timeline ../ConflictOfInterests }}
                     {{/if_eq}}
 
+                    {{#if_eq handle 'global-player'}}
+                        {{> templates/partials/global-player ../FacingTheWorld }}
+                    {{/if_eq}}
+
                     {{#if_eq handle 'the-russia-question'}}
                         {{> templates/partials/timeline ../TheRussiaQuestion }}
                     {{/if_eq}}
