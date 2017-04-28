@@ -9,6 +9,7 @@
     &:after {
         content: '';
         position: absolute;
+        z-index: 2;
         height: 134px;
         width: 1px;
         background-color: $c-black;
@@ -22,14 +23,21 @@
 }
 
 .trump-global__text {
-    transform: rotate(-90deg) translateX(-144px);
-    transform-origin: left;
+    transform: rotate(-90deg) translateX(-167px);
+    transform-origin: left top;
     font-size: 14px;
     line-height: 1.45;
+    margin-left: -20px;
     font-family: 'Guardian Sans Web';
-    color: $c-black;
+    color: #333333;
+    width: 140px;
+    position: relative;
+    z-index: 2;
+    background-color: $c-off-white;
 
     span {
+        position: relative;
+        z-index: 1;
         display: block;
         color: $c-dark-grey;
     }
@@ -37,6 +45,6 @@
 
 .trump-global__flag {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     top: 42px;
 }
