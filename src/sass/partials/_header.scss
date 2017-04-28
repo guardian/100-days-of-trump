@@ -41,6 +41,7 @@
     font-family: 'Guardian Egyptian Web';
     color: $c-white;
     font-family: 800;
+    margin: 0;
 
     @include mq(tablet) {
         font-size: 60px;
@@ -80,6 +81,7 @@
     font-family: 'Guardian Egyptian Web';
     font-weight: 800;
     color: $c-light-blue;
+    margin: 0;
     margin-left: 20px;
 
     @include mq(tablet) {
