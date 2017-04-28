@@ -4,6 +4,8 @@
     </div>
 
     {{#each this}}
-        <div class='trump-executive-order trump-executive-order--{{ day }}' title='{{ executiveOrder }}'></div>
+        <div class='trump-executive-order trump-executive-order--{{ day }}'>
+            <span class='trump-executive__label'>{{ executiveOrder }}</span>
+        </div>
     {{/each}}
 </div>

@@ -1,19 +1,56 @@
 .trump-legislative {
     position: relative;
+
+    .trump-key:before {
+        background-color: $c-red;
+    }
 }
 
 .trump-executive-order {
     position: absolute;
-    top: 100px;
+    top: 144px;
     width: 12px;
     margin-left: -12px;
     height: 12px;
     border-radius: 6px;
-    background-color: $c-grey;
+    background-color: $c-red;
+
+    &:hover .trump-executive__label {
+        opacity: 1 !important;
+    }
 }
 
 @for $i from 1 through 100 {
     .trump-executive-order--#{$i} {
         left: $i * 1%;
     }
+
+    .trump-executive-order--#{$i} + .trump-executive-order--#{$i} {
+        top: 130px;
+    }
+
+    .trump-executive-order--#{$i} + .trump-executive-order--#{$i} + .trump-executive-order--#{$i} {
+        top: 116px;
+    }
+
+    .trump-executive-order--#{$i} + .trump-executive-order--#{$i} + .trump-executive-order--#{$i} + .trump-executive-order--#{$i} {
+        top: 102px;
+    }
+}
+
+.trump-executive__label {
+    opacity: 0;
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    padding: 4px;
+    background-color: $c-blue;
+    top: -6px;
+    left: 14px;
+    width: 240px;
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    line-height: 1.2;
+    color: $c-white;
+    transition: opacity 0.2s ease-in;
 }
