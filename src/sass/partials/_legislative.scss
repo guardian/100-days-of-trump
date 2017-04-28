@@ -53,4 +53,8 @@
     line-height: 1.2;
     color: $c-white;
     transition: opacity 0.2s ease-in;
+
+    @include mq(desktop) {
+        display: none;
+    }
 }
