@@ -34,10 +34,6 @@
                         {{> templates/partials/competence ../Competence }}
                     {{/if_eq}}
 
-                    {{#if_eq handle 'conflict-of-interests'}}
-                        {{> templates/partials/timeline ../ConflictOfInterests }}
-                    {{/if_eq}}
-
                     {{#if_eq handle 'global-player'}}
                         {{> templates/partials/global-player ../FacingTheWorld }}
                     {{/if_eq}}
@@ -48,6 +44,10 @@
 
                     {{#if_eq handle 'team-trump'}}
                         {{> templates/partials/timeline ../TeamTrump }}
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'conflicts-of-interest'}}
+                        {{> templates/partials/conflict ../ConflictOfInterests }}
                     {{/if_eq}}
                 </div>
             {{/each}}

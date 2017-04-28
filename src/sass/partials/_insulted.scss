@@ -1,0 +1,46 @@
+.trump-conflict {
+    position: relative;
+}
+
+.trump-conflict__thing {
+    position: absolute;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    background-color: $c-light-grey;
+    border-radius: 16px;
+    margin-left: -28px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 124px;
+        width: 1px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: $c-red;
+    }
+}
+
+@for $i from 0 through 100 {
+    .trump-conflict__thing--#{$i} {
+        left: ($i * 1%);
+    }
+}
+
+.trump-conflict__label {
+    position: absolute;
+    left: 0;
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    line-height: 1.2;
+    color: $c-black;
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-116px);
+    width: 120px;
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
