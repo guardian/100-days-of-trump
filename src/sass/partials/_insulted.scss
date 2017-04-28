@@ -37,10 +37,16 @@
     line-height: 1.2;
     color: $c-black;
     transform-origin: left top;
-    transform: rotate(-90deg) translateX(-116px);
+    transform: rotate(-90deg) translateX(-114px);
     width: 120px;
     margin-left: 20px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.trump-conflict__image {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
 }
