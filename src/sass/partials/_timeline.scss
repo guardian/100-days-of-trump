@@ -16,7 +16,7 @@
 
 @for $i from 0 through 100 {
     .trump-timeline__entry--#{$i} {
-        left: ($i * 1%) + ($i * 0.01%) - .96%;
+        left: ($i * 1%);
     }
 }
 
@@ -24,7 +24,7 @@
 .trump-timeline__entry--flip {
     padding-left: 0;
     padding-right: 70px;
-    margin-left: -238px;
+    margin-left: -318px;
     max-width: 280px;
 
     .trump-timeline__image {
