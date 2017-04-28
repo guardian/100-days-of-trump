@@ -54,7 +54,7 @@
     color: $c-white;
     transition: opacity 0.2s ease-in;
 
-    @include mq(desktop) {
+    @include mq($until: desktop) {
         display: none;
     }
 }

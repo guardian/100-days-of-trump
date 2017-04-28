@@ -52,7 +52,7 @@ module.exports =  {
 
     setSection: function() {
         $('.trump__section').each(function(i) {
-            if (windowTop > $(this).offset().top - ($(this).height() / 3) - timeLineHeight) {
+            if (windowTop > $(this).offset().top - ($(this).height() / 4)) {
                 targetSection = $(this).attr('data-handle');
             }
         });
