@@ -1,3 +1,8 @@
+.trump-graphic {
+    position: static;
+    transform: translate3d(0px,0px,0px);
+}
+
 .trump-graphic.is-sticky {
     position: fixed;
     bottom: 0;
@@ -41,7 +46,7 @@
     font-size: 24px;
     line-height: 1.2;
     font-family: 'Guardian Egyptian Web';
-    font-weight: 900;
+    font-weight: 800;
     margin: 0;
     padding-top: 4px;
 }
@@ -89,7 +94,6 @@
     @include mq($until: desktop) {
         .gs-container {
             overflow-x: scroll;
-            backface-visibility: hidden;
             -webkit-overflow-scrolling: touch;
             overflow-y: hidden;
         }
@@ -184,7 +188,8 @@ $graphics: 'best-achievements', 'worst-failures', 'tone', 'legislative-agenda', 
 }
 
 // overrides
-.trump-graphic--intro {
+.trump-graphic--intro,
+.trump-graphic--undefined {
     .trump-graphic__labels--best-achievements,
     .trump-graphic__graphic--best-achievements {
         display: block;

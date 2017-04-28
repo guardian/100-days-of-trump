@@ -3,7 +3,9 @@ var $ = require('../vendor/jquery.js');
 var windowTop,
     windowHeight,
     timeLinePos,
-    timeLineHeight;
+    timeLineHeight,
+    oldSection,
+    targetSection;
 
 module.exports =  {
     init: function() {
@@ -49,17 +51,22 @@ module.exports =  {
     },
 
     setSection: function() {
-        var targetSection;
-
         $('.trump__section').each(function(i) {
             if (windowTop > $(this).offset().top - ($(this).height() / 3) - timeLineHeight) {
                 targetSection = $(this).attr('data-handle');
             }
         });
 
-        $('.trump-graphic').removeClass(function(index, className) {
-            return (className.match (/(^|\s)trump-graphic--\S+/g) || []).join(' ');
-        });
-        $('.trump-graphic').addClass('trump-graphic--' + targetSection);
+        if (targetSection !== oldSection) {
+            $('.trump-graphic .gs-container').scrollLeft(0);
+
+            $('.trump-graphic').removeClass(function(index, className) {
+                return (className.match (/(^|\s)trump-graphic--\S+/g) || []).join(' ');
+            });
+
+            $('.trump-graphic').addClass('trump-graphic--' + targetSection);
+
+            oldSection = targetSection;
+        }
     }
 };
