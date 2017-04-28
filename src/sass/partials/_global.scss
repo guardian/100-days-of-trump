@@ -4,15 +4,32 @@
 
 .trump-global__visit {
     position: absolute;
-    top: -10px;
+    top: -24px;
 
     &:after {
         content: '';
         position: absolute;
         z-index: 2;
-        height: 134px;
+        height: 146px;
         width: 1px;
+        top: 39px;
         background-color: $c-black;
+    }
+
+    &:hover .trump-global__text {
+        opacity: 1;
+    }
+
+    &:nth-of-type(even) {
+        top: 6px;
+
+        &:after {
+            height: 122px;
+        }
+
+        .trump-global__text {
+            transform: rotate(-90deg) translateX(-154px);
+        }
     }
 }
 
@@ -23,7 +40,9 @@
 }
 
 .trump-global__text {
-    transform: rotate(-90deg) translateX(-167px);
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(-90deg) translateX(-180px);
     transform-origin: left top;
     font-size: 14px;
     line-height: 1.45;
@@ -34,6 +53,7 @@
     position: relative;
     z-index: 2;
     background-color: $c-off-white;
+    transition: 0.2s opacity ease-in;
 
     span {
         position: relative;
