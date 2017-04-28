@@ -17,7 +17,7 @@
 
 @for $i from 0 through 100 {
     .trump-global__visit--#{$i} {
-        left: ($i * 1%) + ($i * 0.01%) - .96%;
+        left: ($i * 1%);
     }
 }
 
