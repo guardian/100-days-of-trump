@@ -35,24 +35,31 @@ module.exports =  {
         $('.trump-graphic').removeClass('is-sticky');
         timeLinePos = $('.trump-graphic').offset().top;
         timeLineHeight = $('.trump-graphic').height();
+        articleHeight = $('.trump__article').height();
     },
 
     fixTimeline: function() {
-        if (timeLinePos + timeLineHeight > windowTop + windowHeight) {
-            $('.trump-graphic').removeClass('is-sticky');
+        if (articleHeight + (timeLineHeight * 2) + 24 <= windowTop + windowHeight) {
+            $('.trump-graphic').removeClass('is-sticky').addClass('is-done');
+        } else if (timeLinePos + timeLineHeight > windowTop + windowHeight) {
+            $('.trump-graphic').removeClass('is-sticky is-done');
         } else {
-            $('.trump-graphic').addClass('is-sticky');
+            $('.trump-graphic').removeClass('is-done').addClass('is-sticky');
         }
     },
 
     setSection: function() {
+        var targetSection;
+
         $('.trump__section').each(function(i) {
-            if (windowTop > $(this).offset().top - ($(this).height() / 4) - timeLineHeight) {
-                $('.trump-graphic').removeClass(function(index, className) {
-                    return (className.match (/(^|\s)trump-graphic--\S+/g) || []).join(' ');
-                });
-                $('.trump-graphic').addClass('trump-graphic--' + $(this).attr('data-handle'));
+            if (windowTop > $(this).offset().top - ($(this).height() / 3) - timeLineHeight) {
+                targetSection = $(this).attr('data-handle');
             }
         });
+
+        $('.trump-graphic').removeClass(function(index, className) {
+            return (className.match (/(^|\s)trump-graphic--\S+/g) || []).join(' ');
+        });
+        $('.trump-graphic').addClass('trump-graphic--' + targetSection);
     }
 };

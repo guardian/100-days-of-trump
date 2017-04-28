@@ -7,6 +7,14 @@
     z-index: 10;
 }
 
+.trump-graphic.is-done {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
 .trump-graphic__data,
 .trump-graphic__header {
     .gs-container {
@@ -39,13 +47,13 @@
 }
 
 .trump-graphic__number {
-    font-size: 48px;
+    font-size: 32px;
     font-family: 'Guardian Egyptian Web';
     font-weight: 800;
     line-height: 1;
 
     @include mq(tablet) {
-        font-size: 32px;
+        font-size: 48px;
     }
 
     sub {
@@ -178,6 +186,13 @@ $graphics: 'best-achievements', 'worst-failures', 'tone', 'legislative-agenda', 
 .trump-graphic--intro {
     .trump-graphic__labels--best-achievements,
     .trump-graphic__graphic--best-achievements {
+        display: block;
+    }
+}
+
+.trump-graphic--the-next-100-days- {
+    .trump-graphic__labels--conflicts-of-interest,
+    .trump-graphic__graphic--conflicts-of-interest {
         display: block;
     }
 }

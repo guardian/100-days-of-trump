@@ -6,10 +6,10 @@ module.exports =  {
     },
 
     bindings: function() {
-        $('.trump-tracker__data-points').bind('touchstart', function() {
+        $('.trump-graphic__wrapper').bind('touchstart', function() {
             this.onTouchStart();
         }.bind(this));
-        $('.trump-tracker__data-points').bind('touchend', function() {
+        $('.trump-graphic__wrapper').bind('touchend', function() {
             this.onTouchEnd();
         }.bind(this));
     },
