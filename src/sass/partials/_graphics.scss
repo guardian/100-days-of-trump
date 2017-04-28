@@ -69,6 +69,31 @@
     }
 }
 
+.trump-graphic__scroll {
+    background-color: $c-black;
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    color: $c-white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px 10px;
+
+    @include mq(mobileLandscape) {
+        padding: 3px 20px;
+    }
+
+    @include mq(desktop) {
+        display: none;
+    }
+
+    &.has-scrolled {
+        display: none;
+    }
+}
+
 .trump-graphic__cutout {
     position: absolute;
     right: 10px;

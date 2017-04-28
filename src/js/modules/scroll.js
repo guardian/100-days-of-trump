@@ -5,7 +5,8 @@ var windowTop,
     timeLinePos,
     timeLineHeight,
     oldSection,
-    targetSection;
+    targetSection,
+    hasScrolled = false;
 
 module.exports =  {
     init: function() {
@@ -22,6 +23,13 @@ module.exports =  {
         $(window).resize(function() {
             this.setValues();
             this.onScroll();
+        }.bind(this));
+
+        $('.trump-graphic__data .gs-container').scroll(function() {
+            if (hasScrolled == false) {
+                $('.trump-graphic__scroll').addClass('has-scrolled');
+                hasScrolled = true;
+            }
         }.bind(this));
     },
 
@@ -41,7 +49,7 @@ module.exports =  {
     },
 
     fixTimeline: function() {
-        if (articleHeight + (timeLineHeight * 2) + 24 <= windowTop + windowHeight) {
+        if (articleHeight - (timeLineHeight) + 24 <= windowTop + windowHeight) {
             $('.trump-graphic').removeClass('is-sticky').addClass('is-done');
         } else if (timeLinePos + timeLineHeight > windowTop + windowHeight) {
             $('.trump-graphic').removeClass('is-sticky is-done');
