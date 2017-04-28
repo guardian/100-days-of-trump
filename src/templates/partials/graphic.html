@@ -4,6 +4,19 @@
             {{#each Graphics}}
                 <div class='trump-graphic__labels trump-graphic__labels--{{ handle }}'>
                     <h2 class='trump-graphic__title'>{{ title }}</h2>
+                    <h2 class='trump-graphic__number'>
+                    {{#if_eq handle 'tone'}}
+                        981
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'legislative-agenda'}}
+                        28
+                    {{/if_eq}}
+
+                    {{#if_eq handle 'competence'}}
+                        81 <sub>days</sub>
+                    {{/if_eq}}
+                    </h2>
                     <img class='trump-graphic__cutout' src='@@assetPath@@/assets/images/{{ handle }}.png' />
                 </div>
             {{/each}}

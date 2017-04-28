@@ -25,13 +25,28 @@
     background-color: $c-blue;
     color: $c-white;
     margin-top: 24px;
+    margin-bottom: 0;
+    height: 84px;
 }
 
 .trump-graphic__title {
     font-size: 24px;
     font-family: 'Guardian Egyptian Web';
     font-weight: 900;
-    padding-bottom: 36px;
+    margin: 0;
+}
+
+.trump-graphic__number {
+    font-size: 48px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 800;
+    line-height: 1;
+
+    sub {
+        bottom: 0;
+        font-size: 24px;
+        margin-left: -4px;
+    }
 }
 
 .trump-graphic__cutout {
