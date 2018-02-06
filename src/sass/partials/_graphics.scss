@@ -200,14 +200,25 @@ $graphics: 'best-achievements', 'worst-failures', 'tone', 'legislative-agenda', 
 
 .trump-graphic__labels,
 .trump-graphic__graphic {
-    display: none;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+
+    @include mq(mobileLandscape) {
+        left: 20px;
+        right: 20px;
+    }
 }
 
 @each $graphic in $graphics {
     .trump-graphic--#{$graphic} {
         .trump-graphic__labels--#{$graphic},
         .trump-graphic__graphic--#{$graphic} {
-            display: block;
+            opacity: 1;
         }
     }
 }
@@ -217,14 +228,14 @@ $graphics: 'best-achievements', 'worst-failures', 'tone', 'legislative-agenda', 
 .trump-graphic--undefined {
     .trump-graphic__labels--best-achievements,
     .trump-graphic__graphic--best-achievements {
-        display: block;
+       opacity: 1;
     }
 }
 
 .trump-graphic--the-next-100-days- {
     .trump-graphic__labels--conflicts-of-interest,
     .trump-graphic__graphic--conflicts-of-interest {
-        display: block;
+        opacity: 1;
     }
 }
 
