@@ -35,6 +35,11 @@
     font-weight: 800;
     color: $c-red;
     margin: 3px 0 12px 0;
+
+    @include mq(tablet) {
+        margin-top: 8px;
+        font-size: 20px;
+    }
 }
 
 .trump__divider {
@@ -48,6 +53,8 @@
 
     @include mq(desktop) {
         font-size: 40px;
+        margin-top: 32px;
+        margin-bottom: 5px;
     }
 
     &:before {

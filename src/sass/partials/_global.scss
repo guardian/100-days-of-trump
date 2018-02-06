@@ -16,19 +16,21 @@
         background-color: $c-black;
     }
 
-    &:hover .trump-global__text {
-        opacity: 1;
+    &:hover {
+        .trump-global__text {
+            opacity: 1;
+        }
     }
 
     &:nth-of-type(even) {
         top: 6px;
 
         &:after {
-            height: 122px;
+            height: 117px;
         }
 
         .trump-global__text {
-            transform: rotate(-90deg) translateX(-154px);
+            transform: rotate(-90deg) translateX(-151px);
         }
     }
 }

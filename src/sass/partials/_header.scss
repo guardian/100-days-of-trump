@@ -45,7 +45,8 @@
 
     @include mq(tablet) {
         font-size: 60px;
-        line-height: .9;
+        line-height: 1;
+        margin-bottom: 10px;
     }
 
     span {
