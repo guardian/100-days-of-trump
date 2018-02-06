@@ -49,12 +49,10 @@ module.exports =  {
     },
 
     fixTimeline: function() {
-        if (articleHeight - (timeLineHeight) + 24 <= windowTop + windowHeight) {
-            $('.trump-graphic').removeClass('is-sticky').addClass('is-done');
-        } else if (timeLinePos + timeLineHeight > windowTop + windowHeight) {
-            $('.trump-graphic').removeClass('is-sticky is-done');
+        if (timeLinePos + timeLineHeight > windowTop + windowHeight) {
+            $('.trump-graphic').removeClass('is-sticky');
         } else {
-            $('.trump-graphic').removeClass('is-done').addClass('is-sticky');
+            $('.trump-graphic').addClass('is-sticky');
         }
     },
 

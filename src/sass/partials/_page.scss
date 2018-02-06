@@ -11,6 +11,10 @@ figure.interactive-atom {
     height: 100%;
 }
 
+.is-immersive-interactive footer.l-footer {
+    display: none !important;
+}
+
 .site-message {
     display: none !important;
 }
